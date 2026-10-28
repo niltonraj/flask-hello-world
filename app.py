@@ -4,7 +4,7 @@ app = Flask(__name__)
 @app.route('/')
 def inicio():
     print ('Acesso a pagina inicial', flush=True)
-    mensagem = os.gatenv('MENSAGEM', 'Olá, FASF!')
+    mensagem = os.getenv('MENSAGEM', 'Olá, FASF!')
     return f',<h1>{mensagem}</h1><p>Aula de PaaS</p>'
 
 @app.route('/sobre')
